@@ -1,0 +1,2017 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "PerceptAI API",
+    "description": "API REST simplificada do PerceptAI (PostgREST/Supabase).",
+    "version": "1.0"
+  },
+  "host": "jhoepxcrnyxytwjodjfv.supabase.co:443",
+  "basePath": "/rest/v1",
+  "schemes": [
+    "https"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/administracoes_medicamento": {
+      "get": {
+        "summary": "Listar administracoes_medicamento",
+        "description": "Registros de administração",
+        "tags": [
+          "administracoes_medicamento"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "Máximo de resultados (opcional)",
+            "type": "integer",
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "summary": "Criar administracoes_medicamento",
+        "description": "Registros de administração",
+        "tags": [
+          "administracoes_medicamento"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Dados para criar",
+            "schema": {
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Criado"
+          }
+        }
+      }
+    },
+    "/administracoes_medicamento/{id}": {
+      "get": {
+        "summary": "Buscar administracoes_medicamento por ID",
+        "description": "Registros de administração",
+        "tags": [
+          "administracoes_medicamento"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID do registro",
+            "type": "string",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Não encontrado"
+          }
+        }
+      },
+      "put": {
+        "summary": "Atualizar administracoes_medicamento por ID",
+        "description": "Registros de administração",
+        "tags": [
+          "administracoes_medicamento"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID do registro",
+            "type": "string",
+            "required": true
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Dados para atualizar",
+            "schema": {
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Atualizado"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Deletar administracoes_medicamento por ID",
+        "description": "Registros de administração",
+        "tags": [
+          "administracoes_medicamento"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID do registro",
+            "type": "string",
+            "required": true
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Deletado"
+          }
+        }
+      }
+    },
+    "/logs_auditoria": {
+      "get": {
+        "summary": "Listar logs_auditoria",
+        "description": "Logs de auditoria",
+        "tags": [
+          "logs_auditoria"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "Máximo de resultados (opcional)",
+            "type": "integer",
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "summary": "Criar logs_auditoria",
+        "description": "Logs de auditoria",
+        "tags": [
+          "logs_auditoria"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Dados para criar",
+            "schema": {
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Criado"
+          }
+        }
+      }
+    },
+    "/logs_auditoria/{id}": {
+      "get": {
+        "summary": "Buscar logs_auditoria por ID",
+        "description": "Logs de auditoria",
+        "tags": [
+          "logs_auditoria"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID do registro",
+            "type": "string",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Não encontrado"
+          }
+        }
+      },
+      "put": {
+        "summary": "Atualizar logs_auditoria por ID",
+        "description": "Logs de auditoria",
+        "tags": [
+          "logs_auditoria"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID do registro",
+            "type": "string",
+            "required": true
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Dados para atualizar",
+            "schema": {
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Atualizado"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Deletar logs_auditoria por ID",
+        "description": "Logs de auditoria",
+        "tags": [
+          "logs_auditoria"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID do registro",
+            "type": "string",
+            "required": true
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Deletado"
+          }
+        }
+      }
+    },
+    "/sinais_vitais": {
+      "get": {
+        "summary": "Listar sinais_vitais",
+        "description": "Sinais vitais dos pacientes",
+        "tags": [
+          "sinais_vitais"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "Máximo de resultados (opcional)",
+            "type": "integer",
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "summary": "Criar sinais_vitais",
+        "description": "Sinais vitais dos pacientes",
+        "tags": [
+          "sinais_vitais"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Dados para criar",
+            "schema": {
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Criado"
+          }
+        }
+      }
+    },
+    "/sinais_vitais/{id}": {
+      "get": {
+        "summary": "Buscar sinais_vitais por ID",
+        "description": "Sinais vitais dos pacientes",
+        "tags": [
+          "sinais_vitais"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID do registro",
+            "type": "string",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Não encontrado"
+          }
+        }
+      },
+      "put": {
+        "summary": "Atualizar sinais_vitais por ID",
+        "description": "Sinais vitais dos pacientes",
+        "tags": [
+          "sinais_vitais"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID do registro",
+            "type": "string",
+            "required": true
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Dados para atualizar",
+            "schema": {
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Atualizado"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Deletar sinais_vitais por ID",
+        "description": "Sinais vitais dos pacientes",
+        "tags": [
+          "sinais_vitais"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID do registro",
+            "type": "string",
+            "required": true
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Deletado"
+          }
+        }
+      }
+    },
+    "/pacientes": {
+      "get": {
+        "summary": "Listar pacientes",
+        "description": "Gerenciamento de pacientes",
+        "tags": [
+          "pacientes"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "Máximo de resultados (opcional)",
+            "type": "integer",
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "summary": "Criar pacientes",
+        "description": "Gerenciamento de pacientes",
+        "tags": [
+          "pacientes"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Dados para criar",
+            "schema": {
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Criado"
+          }
+        }
+      }
+    },
+    "/pacientes/{id}": {
+      "get": {
+        "summary": "Buscar pacientes por ID",
+        "description": "Gerenciamento de pacientes",
+        "tags": [
+          "pacientes"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID do registro",
+            "type": "string",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Não encontrado"
+          }
+        }
+      },
+      "put": {
+        "summary": "Atualizar pacientes por ID",
+        "description": "Gerenciamento de pacientes",
+        "tags": [
+          "pacientes"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID do registro",
+            "type": "string",
+            "required": true
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Dados para atualizar",
+            "schema": {
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Atualizado"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Deletar pacientes por ID",
+        "description": "Gerenciamento de pacientes",
+        "tags": [
+          "pacientes"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID do registro",
+            "type": "string",
+            "required": true
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Deletado"
+          }
+        }
+      }
+    },
+    "/estoque": {
+      "get": {
+        "summary": "Listar estoque",
+        "description": "Controle de estoque",
+        "tags": [
+          "estoque"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "Máximo de resultados (opcional)",
+            "type": "integer",
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "summary": "Criar estoque",
+        "description": "Controle de estoque",
+        "tags": [
+          "estoque"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Dados para criar",
+            "schema": {
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Criado"
+          }
+        }
+      }
+    },
+    "/estoque/{id}": {
+      "get": {
+        "summary": "Buscar estoque por ID",
+        "description": "Controle de estoque",
+        "tags": [
+          "estoque"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID do registro",
+            "type": "string",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Não encontrado"
+          }
+        }
+      },
+      "put": {
+        "summary": "Atualizar estoque por ID",
+        "description": "Controle de estoque",
+        "tags": [
+          "estoque"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID do registro",
+            "type": "string",
+            "required": true
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Dados para atualizar",
+            "schema": {
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Atualizado"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Deletar estoque por ID",
+        "description": "Controle de estoque",
+        "tags": [
+          "estoque"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID do registro",
+            "type": "string",
+            "required": true
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Deletado"
+          }
+        }
+      }
+    },
+    "/internacoes": {
+      "get": {
+        "summary": "Listar internacoes",
+        "description": "Internações hospitalares",
+        "tags": [
+          "internacoes"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "Máximo de resultados (opcional)",
+            "type": "integer",
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "summary": "Criar internacoes",
+        "description": "Internações hospitalares",
+        "tags": [
+          "internacoes"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Dados para criar",
+            "schema": {
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Criado"
+          }
+        }
+      }
+    },
+    "/internacoes/{id}": {
+      "get": {
+        "summary": "Buscar internacoes por ID",
+        "description": "Internações hospitalares",
+        "tags": [
+          "internacoes"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID do registro",
+            "type": "string",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Não encontrado"
+          }
+        }
+      },
+      "put": {
+        "summary": "Atualizar internacoes por ID",
+        "description": "Internações hospitalares",
+        "tags": [
+          "internacoes"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID do registro",
+            "type": "string",
+            "required": true
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Dados para atualizar",
+            "schema": {
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Atualizado"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Deletar internacoes por ID",
+        "description": "Internações hospitalares",
+        "tags": [
+          "internacoes"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID do registro",
+            "type": "string",
+            "required": true
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Deletado"
+          }
+        }
+      }
+    },
+    "/leitos": {
+      "get": {
+        "summary": "Listar leitos",
+        "description": "Leitos hospitalares",
+        "tags": [
+          "leitos"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "Máximo de resultados (opcional)",
+            "type": "integer",
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "summary": "Criar leitos",
+        "description": "Leitos hospitalares",
+        "tags": [
+          "leitos"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Dados para criar",
+            "schema": {
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Criado"
+          }
+        }
+      }
+    },
+    "/leitos/{id}": {
+      "get": {
+        "summary": "Buscar leitos por ID",
+        "description": "Leitos hospitalares",
+        "tags": [
+          "leitos"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID do registro",
+            "type": "string",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Não encontrado"
+          }
+        }
+      },
+      "put": {
+        "summary": "Atualizar leitos por ID",
+        "description": "Leitos hospitalares",
+        "tags": [
+          "leitos"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID do registro",
+            "type": "string",
+            "required": true
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Dados para atualizar",
+            "schema": {
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Atualizado"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Deletar leitos por ID",
+        "description": "Leitos hospitalares",
+        "tags": [
+          "leitos"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID do registro",
+            "type": "string",
+            "required": true
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Deletado"
+          }
+        }
+      }
+    },
+    "/calendario_eventos": {
+      "get": {
+        "summary": "Listar calendario_eventos",
+        "description": "Eventos do calendário",
+        "tags": [
+          "calendario_eventos"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "Máximo de resultados (opcional)",
+            "type": "integer",
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "summary": "Criar calendario_eventos",
+        "description": "Eventos do calendário",
+        "tags": [
+          "calendario_eventos"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Dados para criar",
+            "schema": {
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Criado"
+          }
+        }
+      }
+    },
+    "/calendario_eventos/{id}": {
+      "get": {
+        "summary": "Buscar calendario_eventos por ID",
+        "description": "Eventos do calendário",
+        "tags": [
+          "calendario_eventos"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID do registro",
+            "type": "string",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Não encontrado"
+          }
+        }
+      },
+      "put": {
+        "summary": "Atualizar calendario_eventos por ID",
+        "description": "Eventos do calendário",
+        "tags": [
+          "calendario_eventos"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID do registro",
+            "type": "string",
+            "required": true
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Dados para atualizar",
+            "schema": {
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Atualizado"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Deletar calendario_eventos por ID",
+        "description": "Eventos do calendário",
+        "tags": [
+          "calendario_eventos"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID do registro",
+            "type": "string",
+            "required": true
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Deletado"
+          }
+        }
+      }
+    },
+    "/prontuarios": {
+      "get": {
+        "summary": "Listar prontuarios",
+        "description": "Prontuários médicos",
+        "tags": [
+          "prontuarios"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "Máximo de resultados (opcional)",
+            "type": "integer",
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "summary": "Criar prontuarios",
+        "description": "Prontuários médicos",
+        "tags": [
+          "prontuarios"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Dados para criar",
+            "schema": {
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Criado"
+          }
+        }
+      }
+    },
+    "/prontuarios/{id}": {
+      "get": {
+        "summary": "Buscar prontuarios por ID",
+        "description": "Prontuários médicos",
+        "tags": [
+          "prontuarios"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID do registro",
+            "type": "string",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Não encontrado"
+          }
+        }
+      },
+      "put": {
+        "summary": "Atualizar prontuarios por ID",
+        "description": "Prontuários médicos",
+        "tags": [
+          "prontuarios"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID do registro",
+            "type": "string",
+            "required": true
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Dados para atualizar",
+            "schema": {
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Atualizado"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Deletar prontuarios por ID",
+        "description": "Prontuários médicos",
+        "tags": [
+          "prontuarios"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID do registro",
+            "type": "string",
+            "required": true
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Deletado"
+          }
+        }
+      }
+    },
+    "/movimentacoes_estoque": {
+      "get": {
+        "summary": "Listar movimentacoes_estoque",
+        "description": "Movimentações de estoque",
+        "tags": [
+          "movimentacoes_estoque"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "Máximo de resultados (opcional)",
+            "type": "integer",
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "summary": "Criar movimentacoes_estoque",
+        "description": "Movimentações de estoque",
+        "tags": [
+          "movimentacoes_estoque"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Dados para criar",
+            "schema": {
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Criado"
+          }
+        }
+      }
+    },
+    "/movimentacoes_estoque/{id}": {
+      "get": {
+        "summary": "Buscar movimentacoes_estoque por ID",
+        "description": "Movimentações de estoque",
+        "tags": [
+          "movimentacoes_estoque"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID do registro",
+            "type": "string",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Não encontrado"
+          }
+        }
+      },
+      "put": {
+        "summary": "Atualizar movimentacoes_estoque por ID",
+        "description": "Movimentações de estoque",
+        "tags": [
+          "movimentacoes_estoque"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID do registro",
+            "type": "string",
+            "required": true
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Dados para atualizar",
+            "schema": {
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Atualizado"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Deletar movimentacoes_estoque por ID",
+        "description": "Movimentações de estoque",
+        "tags": [
+          "movimentacoes_estoque"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID do registro",
+            "type": "string",
+            "required": true
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Deletado"
+          }
+        }
+      }
+    },
+    "/prescricoes_medicamentos": {
+      "get": {
+        "summary": "Listar prescricoes_medicamentos",
+        "description": "Prescrições de medicamentos",
+        "tags": [
+          "prescricoes_medicamentos"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "Máximo de resultados (opcional)",
+            "type": "integer",
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "summary": "Criar prescricoes_medicamentos",
+        "description": "Prescrições de medicamentos",
+        "tags": [
+          "prescricoes_medicamentos"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Dados para criar",
+            "schema": {
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Criado"
+          }
+        }
+      }
+    },
+    "/prescricoes_medicamentos/{id}": {
+      "get": {
+        "summary": "Buscar prescricoes_medicamentos por ID",
+        "description": "Prescrições de medicamentos",
+        "tags": [
+          "prescricoes_medicamentos"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID do registro",
+            "type": "string",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Não encontrado"
+          }
+        }
+      },
+      "put": {
+        "summary": "Atualizar prescricoes_medicamentos por ID",
+        "description": "Prescrições de medicamentos",
+        "tags": [
+          "prescricoes_medicamentos"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID do registro",
+            "type": "string",
+            "required": true
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Dados para atualizar",
+            "schema": {
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Atualizado"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Deletar prescricoes_medicamentos por ID",
+        "description": "Prescrições de medicamentos",
+        "tags": [
+          "prescricoes_medicamentos"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID do registro",
+            "type": "string",
+            "required": true
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Deletado"
+          }
+        }
+      }
+    },
+    "/expressoes_faciais": {
+      "get": {
+        "summary": "Listar expressoes_faciais",
+        "description": "Detecções de expressões faciais",
+        "tags": [
+          "expressoes_faciais"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "Máximo de resultados (opcional)",
+            "type": "integer",
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "summary": "Criar expressoes_faciais",
+        "description": "Detecções de expressões faciais",
+        "tags": [
+          "expressoes_faciais"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Dados para criar",
+            "schema": {
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Criado"
+          }
+        }
+      }
+    },
+    "/expressoes_faciais/{id}": {
+      "get": {
+        "summary": "Buscar expressoes_faciais por ID",
+        "description": "Detecções de expressões faciais",
+        "tags": [
+          "expressoes_faciais"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID do registro",
+            "type": "string",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Não encontrado"
+          }
+        }
+      },
+      "put": {
+        "summary": "Atualizar expressoes_faciais por ID",
+        "description": "Detecções de expressões faciais",
+        "tags": [
+          "expressoes_faciais"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID do registro",
+            "type": "string",
+            "required": true
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Dados para atualizar",
+            "schema": {
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Atualizado"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Deletar expressoes_faciais por ID",
+        "description": "Detecções de expressões faciais",
+        "tags": [
+          "expressoes_faciais"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID do registro",
+            "type": "string",
+            "required": true
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Deletado"
+          }
+        }
+      }
+    },
+    "/medicamentos": {
+      "get": {
+        "summary": "Listar medicamentos",
+        "description": "Catálogo de medicamentos",
+        "tags": [
+          "medicamentos"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "Máximo de resultados (opcional)",
+            "type": "integer",
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "summary": "Criar medicamentos",
+        "description": "Catálogo de medicamentos",
+        "tags": [
+          "medicamentos"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Dados para criar",
+            "schema": {
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Criado"
+          }
+        }
+      }
+    },
+    "/medicamentos/{id}": {
+      "get": {
+        "summary": "Buscar medicamentos por ID",
+        "description": "Catálogo de medicamentos",
+        "tags": [
+          "medicamentos"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID do registro",
+            "type": "string",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Não encontrado"
+          }
+        }
+      },
+      "put": {
+        "summary": "Atualizar medicamentos por ID",
+        "description": "Catálogo de medicamentos",
+        "tags": [
+          "medicamentos"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID do registro",
+            "type": "string",
+            "required": true
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Dados para atualizar",
+            "schema": {
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Atualizado"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Deletar medicamentos por ID",
+        "description": "Catálogo de medicamentos",
+        "tags": [
+          "medicamentos"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID do registro",
+            "type": "string",
+            "required": true
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Deletado"
+          }
+        }
+      }
+    },
+    "/visitantes": {
+      "get": {
+        "summary": "Listar visitantes",
+        "description": "Visitantes autorizados",
+        "tags": [
+          "visitantes"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "Máximo de resultados (opcional)",
+            "type": "integer",
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "summary": "Criar visitantes",
+        "description": "Visitantes autorizados",
+        "tags": [
+          "visitantes"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Dados para criar",
+            "schema": {
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Criado"
+          }
+        }
+      }
+    },
+    "/visitantes/{id}": {
+      "get": {
+        "summary": "Buscar visitantes por ID",
+        "description": "Visitantes autorizados",
+        "tags": [
+          "visitantes"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID do registro",
+            "type": "string",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Não encontrado"
+          }
+        }
+      },
+      "put": {
+        "summary": "Atualizar visitantes por ID",
+        "description": "Visitantes autorizados",
+        "tags": [
+          "visitantes"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID do registro",
+            "type": "string",
+            "required": true
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Dados para atualizar",
+            "schema": {
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Atualizado"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Deletar visitantes por ID",
+        "description": "Visitantes autorizados",
+        "tags": [
+          "visitantes"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID do registro",
+            "type": "string",
+            "required": true
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Deletado"
+          }
+        }
+      }
+    },
+    "/usuarios": {
+      "get": {
+        "summary": "Listar usuarios",
+        "description": "Usuários do sistema",
+        "tags": [
+          "usuarios"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "Máximo de resultados (opcional)",
+            "type": "integer",
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "summary": "Criar usuarios",
+        "description": "Usuários do sistema",
+        "tags": [
+          "usuarios"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Dados para criar",
+            "schema": {
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Criado"
+          }
+        }
+      }
+    },
+    "/usuarios/{id}": {
+      "get": {
+        "summary": "Buscar usuarios por ID",
+        "description": "Usuários do sistema",
+        "tags": [
+          "usuarios"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID do registro",
+            "type": "string",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Não encontrado"
+          }
+        }
+      },
+      "put": {
+        "summary": "Atualizar usuarios por ID",
+        "description": "Usuários do sistema",
+        "tags": [
+          "usuarios"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID do registro",
+            "type": "string",
+            "required": true
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Dados para atualizar",
+            "schema": {
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Atualizado"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Deletar usuarios por ID",
+        "description": "Usuários do sistema",
+        "tags": [
+          "usuarios"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID do registro",
+            "type": "string",
+            "required": true
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Deletado"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {}
+}

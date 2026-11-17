@@ -19,6 +19,7 @@ import { Cadastro } from "./modules/cadastro";
 import { Visitas } from "./modules/visitas";
 import { Calendario } from "./modules/calendario";
 import { Prontuario } from "./modules/prontuario";
+import { ApiDocs } from "./modules/api-docs/ApiDocs";
 import { Bed } from "./types";
 
 export default function PerceptAIPrototype() {
@@ -67,6 +68,14 @@ function AppShell() {
     setSelectedBed(bed);
     setPage("info-ia");
   };
+
+  const isApiDocs =
+    typeof window !== "undefined" &&
+    window.location.pathname.replace(/\/+$/, "") === "/docs";
+
+  if (isApiDocs) {
+    return <ApiDocs />;
+  }
 
   return (
     <div className="w-full h-screen" style={{ background: COLORS.bg }}>
